@@ -8,8 +8,11 @@
         android:minSdkVersion="8"
         android:targetSdkVersion="18" />
 
-    <permission android:name="com.example.dummyKerb.SEND_PERM"
+    <permission android:description="@string/app_name"
+        android:label="Talk to Dummy Kerberos"
+        android:name="com.example.dummyKerb.SEND_PERM"
         android:protectionLevel="dangerous"></permission>
+    <uses-permission android:name="com.example.dummyKerb.SEND_PERM" />
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"

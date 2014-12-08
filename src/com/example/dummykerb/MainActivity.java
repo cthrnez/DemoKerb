@@ -11,8 +11,10 @@ public class MainActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+    	System.out.println("SDJFLDSJKF");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        System.out.println("VSDJFLKJSDLF");
     }
 
 
@@ -29,8 +31,9 @@ public class MainActivity extends Activity {
     }
     
     protected static void sendTicket(Context c, String p) {
-    	Log.d("Debug", "Got here");
+    	System.out.println("Got here");
     	Intent intent = new Intent();
+    	intent.addFlags(Intent.FLAG_INCLUDE_STOPPED_PACKAGES);
         intent.setAction("com.example.dummydemo.TESTING");
         intent.setPackage(p);
         c.sendBroadcast(intent);
